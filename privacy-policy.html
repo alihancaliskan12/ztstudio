@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası — Namaz Vakti & Kıble</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0f1a;
+      color: #e2e8f0;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: #0d3b38;
+      border-radius: 12px;
+      border: 1.5px solid #2dd4bf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .logo-text h1 { font-size: 18px; font-weight: 700; color: #fff; }
+    .logo-text p { font-size: 13px; color: #64748b; }
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2dd4bf;
+      margin-bottom: 8px;
+      margin-top: 48px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    p { color: #94a3b8; margin-bottom: 16px; font-size: 15px; }
+    ul { color: #94a3b8; margin-bottom: 16px; padding-left: 20px; font-size: 15px; }
+    li { margin-bottom: 8px; }
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .updated {
+      font-size: 13px;
+      color: #475569;
+      margin-bottom: 40px;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(45,212,191,0.3);
+      background: transparent;
+      color: #2dd4bf;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .lang-btn.active { background: #2dd4bf; color: #0a0f1a; font-weight: 600; }
+    .section { display: none; }
+    .section.active { display: block; }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: #334155;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="logo">
+    <div class="logo-icon">🕌</div>
+    <div class="logo-text">
+      <h1>Namaz Vakti & Kıble</h1>
+      <p>ZT Studio</p>
+    </div>
+  </div>
+
+  <div class="lang-switch">
+    <a class="lang-btn active" onclick="showLang('tr')">Türkçe</a>
+    <a class="lang-btn" onclick="showLang('en')">English</a>
+    <a class="lang-btn" onclick="showLang('ar')">العربية</a>
+    <a class="lang-btn" onclick="showLang('fa')">فارسی</a>
+    <a class="lang-btn" onclick="showLang('my')">Melayu</a>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <div class="section active" id="lang-tr">
+    <h2>Gizlilik Politikası</h2>
+    <p class="updated">Son güncelleme: 1 Mayıs 2026</p>
+
+    <div class="card">
+      <p>ZT Studio olarak, <strong>Namaz Vakti & Kıble</strong> uygulamasını kullanırken gizliliğinizin korunmasını önemsiyoruz. Bu politika, hangi verileri topladığımızı ve nasıl kullandığımızı açıklar.</p>
+    </div>
+
+    <h3>Topladığımız Veriler</h3>
+    <ul>
+      <li><strong>Konum Verisi:</strong> Namaz vakitlerini hesaplamak için GPS konumunuzu kullanıyoruz. Konum verisi yalnızca cihazınızda işlenir, sunucularımıza gönderilmez.</li>
+      <li><strong>İnternet Erişimi:</strong> Namaz vakitlerini Aladhan API'den almak için internet bağlantısı kullanılır.</li>
+    </ul>
+
+    <h3>Toplamadığımız Veriler</h3>
+    <ul>
+      <li>Kişisel kimlik bilgileri (ad, e-posta, telefon)</li>
+      <li>Kullanım istatistikleri veya analitik veriler</li>
+      <li>Cihaz tanımlayıcıları</li>
+      <li>Konum geçmişi</li>
+    </ul>
+
+    <h3>Üçüncü Taraf Hizmetler</h3>
+    <p>Uygulamamız aşağıdaki üçüncü taraf hizmetleri kullanmaktadır:</p>
+    <ul>
+      <li><strong>Aladhan API</strong> — Namaz vakitlerini hesaplamak için. Gizlilik politikası: aladhan.com</li>
+      <li><strong>Nominatim (OpenStreetMap)</strong> — Şehir adını bulmak için ters coğrafi kodlama. Gizlilik politikası: osmfoundation.org</li>
+    </ul>
+
+    <h3>Bildirimler</h3>
+    <p>Namaz vakti bildirimleri tamamen cihazınızda yerel olarak planlanır. Bildirim verisi herhangi bir sunucuya gönderilmez.</p>
+
+    <h3>Çocukların Gizliliği</h3>
+    <p>Uygulamamız 4 yaş ve üzeri kullanıcılar için tasarlanmıştır. Bilerek 13 yaşın altındaki çocuklardan veri toplamıyoruz.</p>
+
+    <h3>Değişiklikler</h3>
+    <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler olduğunda uygulama içinde bildirim yapılacaktır.</p>
+
+    <h3>İletişim</h3>
+    <p>Sorularınız için: <strong>ztstudio.dev@gmail.com</strong></p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="section" id="lang-en">
+    <h2>Privacy Policy</h2>
+    <p class="updated">Last updated: May 1, 2026</p>
+
+    <div class="card">
+      <p>At ZT Studio, we care about your privacy while using <strong>Prayer Times & Qibla</strong>. This policy explains what data we collect and how we use it.</p>
+    </div>
+
+    <h3>Data We Collect</h3>
+    <ul>
+      <li><strong>Location Data:</strong> We use your GPS location to calculate prayer times. Location data is processed only on your device and is never sent to our servers.</li>
+      <li><strong>Internet Access:</strong> An internet connection is used to fetch prayer times from the Aladhan API.</li>
+    </ul>
+
+    <h3>Data We Do NOT Collect</h3>
+    <ul>
+      <li>Personal identification information (name, email, phone)</li>
+      <li>Usage statistics or analytics data</li>
+      <li>Device identifiers</li>
+      <li>Location history</li>
+    </ul>
+
+    <h3>Third-Party Services</h3>
+    <ul>
+      <li><strong>Aladhan API</strong> — For calculating prayer times. Privacy policy: aladhan.com</li>
+      <li><strong>Nominatim (OpenStreetMap)</strong> — For reverse geocoding to find city names. Privacy policy: osmfoundation.org</li>
+    </ul>
+
+    <h3>Notifications</h3>
+    <p>Prayer time notifications are scheduled entirely locally on your device. No notification data is sent to any server.</p>
+
+    <h3>Children's Privacy</h3>
+    <p>Our app is designed for users aged 4 and above. We do not knowingly collect data from children under 13.</p>
+
+    <h3>Changes</h3>
+    <p>We may update this privacy policy from time to time. We will notify you of significant changes within the app.</p>
+
+    <h3>Contact</h3>
+    <p>For questions: <strong>ztstudio.dev@gmail.com</strong></p>
+  </div>
+
+  <!-- ARABIC -->
+  <div class="section" id="lang-ar" dir="rtl">
+    <h2>سياسة الخصوصية</h2>
+    <p class="updated">آخر تحديث: 1 مايو 2026</p>
+
+    <div class="card">
+      <p>في ZT Studio، نهتم بخصوصيتك أثناء استخدام تطبيق <strong>أوقات الصلاة والقبلة</strong>. توضح هذه السياسة البيانات التي نجمعها وكيفية استخدامها.</p>
+    </div>
+
+    <h3>البيانات التي نجمعها</h3>
+    <ul>
+      <li><strong>بيانات الموقع:</strong> نستخدم موقع GPS الخاص بك لحساب أوقات الصلاة. تتم معالجة بيانات الموقع على جهازك فقط ولا ترسل إلى خوادمنا.</li>
+      <li><strong>الوصول إلى الإنترنت:</strong> يُستخدم اتصال الإنترنت لجلب أوقات الصلاة من Aladhan API.</li>
+    </ul>
+
+    <h3>البيانات التي لا نجمعها</h3>
+    <ul>
+      <li>معلومات التعريف الشخصية (الاسم، البريد الإلكتروني، الهاتف)</li>
+      <li>إحصاءات الاستخدام أو بيانات التحليلات</li>
+      <li>معرّفات الجهاز</li>
+      <li>سجل الموقع</li>
+    </ul>
+
+    <h3>الاتصال</h3>
+    <p>للاستفسارات: <strong>ztstudio.dev@gmail.com</strong></p>
+  </div>
+
+  <!-- PERSIAN -->
+  <div class="section" id="lang-fa" dir="rtl">
+    <h2>سیاست حفظ حریم خصوصی</h2>
+    <p class="updated">آخرین به‌روزرسانی: ۱ می ۲۰۲۶</p>
+
+    <div class="card">
+      <p>در ZT Studio، ما به حریم خصوصی شما هنگام استفاده از <strong>اوقات نماز و قبله</strong> اهمیت می‌دهیم.</p>
+    </div>
+
+    <h3>داده‌هایی که جمع‌آوری می‌کنیم</h3>
+    <ul>
+      <li><strong>داده موقعیت:</strong> از موقعیت GPS شما برای محاسبه اوقات نماز استفاده می‌کنیم. داده موقعیت فقط روی دستگاه شما پردازش می‌شود.</li>
+      <li><strong>دسترسی به اینترنت:</strong> برای دریافت اوقات نماز از Aladhan API استفاده می‌شود.</li>
+    </ul>
+
+    <h3>تماس</h3>
+    <p>برای سوالات: <strong>ztstudio.dev@gmail.com</strong></p>
+  </div>
+
+  <!-- MALAY -->
+  <div class="section" id="lang-my">
+    <h2>Dasar Privasi</h2>
+    <p class="updated">Kemaskini terakhir: 1 Mei 2026</p>
+
+    <div class="card">
+      <p>Di ZT Studio, kami mengambil berat tentang privasi anda semasa menggunakan <strong>Waktu Solat & Kiblat</strong>.</p>
+    </div>
+
+    <h3>Data Yang Kami Kumpul</h3>
+    <ul>
+      <li><strong>Data Lokasi:</strong> Kami menggunakan lokasi GPS anda untuk mengira waktu solat. Data lokasi hanya diproses pada peranti anda sahaja.</li>
+      <li><strong>Akses Internet:</strong> Sambungan internet digunakan untuk mendapatkan waktu solat dari Aladhan API.</li>
+    </ul>
+
+    <h3>Hubungi Kami</h3>
+    <p>Untuk pertanyaan: <strong>ztstudio.dev@gmail.com</strong></p>
+  </div>
+
+  <footer>
+    <p>© 2026 ZT Studio · Namaz Vakti & Kıble</p>
+  </footer>
+
+</div>
+
+<script>
+function showLang(lang) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
