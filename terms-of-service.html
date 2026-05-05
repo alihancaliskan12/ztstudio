@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kullanım Şartları — Namaz Vakti & Kıble</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0f1a; color: #e2e8f0; line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 760px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+    .logo-icon { width: 48px; height: 48px; background: #0d3b38; border-radius: 12px; border: 1.5px solid #2dd4bf; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .logo-text h1 { font-size: 18px; font-weight: 700; color: #fff; }
+    .logo-text p { font-size: 13px; color: #64748b; }
+    h2 { font-size: 22px; font-weight: 700; color: #2dd4bf; margin-bottom: 8px; margin-top: 40px; }
+    h3 { font-size: 16px; font-weight: 600; color: #94a3b8; margin-top: 24px; margin-bottom: 8px; }
+    p { color: #94a3b8; margin-bottom: 14px; font-size: 15px; }
+    ul { color: #94a3b8; margin-bottom: 14px; padding-left: 22px; font-size: 15px; }
+    li { margin-bottom: 6px; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 22px; margin-bottom: 16px; }
+    .updated { font-size: 13px; color: #475569; margin-bottom: 32px; }
+    .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+    .lang-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(45,212,191,0.3); background: transparent; color: #2dd4bf; font-size: 13px; cursor: pointer; text-decoration: none; user-select: none; }
+    .lang-btn.active { background: #2dd4bf; color: #0a0f1a; font-weight: 600; }
+    .section { display: none; }
+    .section.active { display: block; }
+    a { color: #2dd4bf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; color: #334155; font-size: 13px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">
+    <div class="logo-icon">🕌</div>
+    <div class="logo-text">
+      <h1>Namaz Vakti & Kıble</h1>
+      <p>ZT Studio</p>
+    </div>
+  </div>
+
+  <div class="lang-switch">
+    <a class="lang-btn active" onclick="showLang('tr',this)">Türkçe</a>
+    <a class="lang-btn" onclick="showLang('en',this)">English</a>
+    <a class="lang-btn" onclick="showLang('ar',this)">العربية</a>
+    <a class="lang-btn" onclick="showLang('fa',this)">فارسی</a>
+    <a class="lang-btn" onclick="showLang('my',this)">Melayu</a>
+    <a class="lang-btn" onclick="showLang('fr',this)">Français</a>
+    <a class="lang-btn" onclick="showLang('es',this)">Español</a>
+    <a class="lang-btn" onclick="showLang('pt',this)">Português</a>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <div class="section active" id="lang-tr">
+    <h2>Kullanım Şartları</h2>
+    <p class="updated">Son güncelleme: 5 Mayıs 2026</p>
+    <div class="card"><p>Bu şartlar, ZT Studio tarafından geliştirilen <strong>Namaz Vakti & Kıble</strong> uygulamasını kullanırken tarafınız ile bizim aramızdaki anlaşmadır. Uygulamayı kullanarak bu şartları kabul etmiş sayılırsınız.</p></div>
+
+    <h3>1. Hizmet Tanımı</h3>
+    <p>Uygulama; namaz vakitleri, Kıble pusulası, Hicri takvim, Kuran-ı Kerim metni ve mealleri, dua/hadis kütüphanesi, tesbihat sayacı ve ilgili özellikleri sunar.</p>
+
+    <h3>2. Doğruluk ve Sorumluluk</h3>
+    <ul>
+      <li>Namaz vakitleri Aladhan API'sinden alınır ve seçtiğiniz hesaplama yöntemine göre hesaplanır. Yerel cami vakitlerinde küçük farklılıklar olabilir; bu nedenle Ayarlar'da dakika düzeltmesi seçeneği sunulur.</li>
+      <li>Kıble açısı GPS koordinatlarınıza ve cihaz manyetometresine dayanır. Manyetik alanlardan etkilenebilir.</li>
+      <li>Uygulama dini bir referans kaynağı değildir. İbadet konularında yetkin bir alimle istişare edilmesi tavsiye edilir.</li>
+      <li>ZT Studio, vakitlerin veya yön bilgisinin %100 doğruluğunu garanti etmez. Uygulama "olduğu gibi" sunulur.</li>
+    </ul>
+
+    <h3>3. Kabul Edilen Kullanım</h3>
+    <p>Uygulamayı yasalara uygun ve kişisel kullanım için kullanmayı kabul edersiniz. Aşağıdakiler yasaktır:</p>
+    <ul>
+      <li>Tersine mühendislik, kaynak koda ulaşma girişimi</li>
+      <li>Otomatik araçlarla (bot, scraper) toplu istek atmak</li>
+      <li>Uygulamayı yetkisiz dağıtmak veya değiştirmek</li>
+      <li>Reklamları engellemek veya manipüle etmek</li>
+    </ul>
+
+    <h3>4. İçerik Telif Hakları</h3>
+    <ul>
+      <li>Kuran-ı Kerim metni Tanzil Project / King Fahd Complex'tan kamuya açık dağıtım yoluyla alınmıştır.</li>
+      <li>Mealler ilgili sahiplerine aittir (Diyanet, Sahih International vb.); İslami eğitim amacıyla kullanılır.</li>
+      <li>Tilavet sesi Şeyh Mishary Rashid Alafasy'a aittir; davet ve eğitim amacıyla yayınlanmıştır.</li>
+      <li>Hadisler kamu malı klasik kaynaklardan (Buhari, Müslim, Tirmizî vb.) seçilmiştir.</li>
+      <li>Uygulamanın kodu, tasarımı ve markası ZT Studio'ya aittir.</li>
+    </ul>
+
+    <h3>5. Reklamlar</h3>
+    <p>Uygulama Google AdMob aracılığıyla reklam gösterir. Reklam içeriği AdMob tarafından sağlanır; ZT Studio gösterilen reklamların içeriğinden sorumlu tutulamaz.</p>
+
+    <h3>6. Üçüncü Taraf Hizmetler</h3>
+    <p>Uygulama Aladhan API, alquran.cloud, OpenStreetMap, Google AdMob ve Firebase gibi üçüncü taraf hizmetlere bağımlıdır. Bu hizmetlerin geçici olarak ulaşılamaması durumunda bazı özellikler çalışmayabilir; bunun sorumluluğu ZT Studio'ya ait değildir.</p>
+
+    <h3>7. Sorumluluk Sınırlaması</h3>
+    <p>Yasaların izin verdiği azami ölçüde, ZT Studio doğrudan, dolaylı, arızi veya sonuç olarak ortaya çıkan zararlardan sorumlu değildir. Uygulamayı kullanma riski tamamen size aittir.</p>
+
+    <h3>8. Hizmet Değişiklikleri</h3>
+    <p>Uygulamanın özelliklerini herhangi bir zamanda değiştirme, askıya alma veya sonlandırma hakkını saklı tutarız.</p>
+
+    <h3>9. Şartlar Değişiklikleri</h3>
+    <p>Bu şartları güncelleyebiliriz. Önemli değişiklikler bu sayfada yayınlanır.</p>
+
+    <h3>10. Uygulanacak Hukuk</h3>
+    <p>Bu şartlar Türkiye Cumhuriyeti yasalarına tabidir. Anlaşmazlıklar için yetkili mahkemeler İstanbul mahkemeleridir.</p>
+
+    <h3>11. İletişim</h3>
+    <p>Sorularınız için: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="section" id="lang-en">
+    <h2>Terms of Service</h2>
+    <p class="updated">Last updated: May 5, 2026</p>
+    <div class="card"><p>These terms are an agreement between you and ZT Studio for use of <strong>Prayer Times & Qibla</strong>. By using the app, you accept these terms.</p></div>
+
+    <h3>1. Service Description</h3>
+    <p>The app provides prayer times, Qibla compass, Hijri calendar, Quran with translations, dua/hadith library, tasbih counter, and related features.</p>
+
+    <h3>2. Accuracy & Responsibility</h3>
+    <ul>
+      <li>Prayer times come from the Aladhan API based on your selected calculation method. Local mosque times may differ slightly; an offset adjustment is available in Settings.</li>
+      <li>Qibla angle relies on GPS and device magnetometer. May be affected by magnetic fields.</li>
+      <li>The app is not a religious reference. Consult a qualified scholar for religious matters.</li>
+      <li>ZT Studio does not guarantee 100% accuracy of times or directions. The app is provided "as is".</li>
+    </ul>
+
+    <h3>3. Acceptable Use</h3>
+    <p>You agree to use the app lawfully for personal use. Prohibited:</p>
+    <ul>
+      <li>Reverse engineering or attempting to access source code</li>
+      <li>Automated bulk requests (bots, scrapers)</li>
+      <li>Unauthorized distribution or modification</li>
+      <li>Blocking or manipulating ads</li>
+    </ul>
+
+    <h3>4. Content Copyright</h3>
+    <ul>
+      <li>Quran text is from Tanzil Project / King Fahd Complex (publicly distributed).</li>
+      <li>Translations belong to their respective authors (Diyanet, Saheeh International, etc.); used for Islamic educational purposes.</li>
+      <li>Recitation by Sheikh Mishary Rashid Alafasy, distributed for da'wah and education.</li>
+      <li>Hadiths are from public-domain classical sources (Bukhari, Muslim, Tirmidhi, etc.).</li>
+      <li>App code, design, and branding belong to ZT Studio.</li>
+    </ul>
+
+    <h3>5. Advertising</h3>
+    <p>The app shows ads via Google AdMob. Ad content is provided by AdMob; ZT Studio is not liable for displayed ad content.</p>
+
+    <h3>6. Third-Party Services</h3>
+    <p>The app depends on Aladhan API, alquran.cloud, OpenStreetMap, Google AdMob, and Firebase. Temporary unavailability of these services may affect features; ZT Studio is not liable.</p>
+
+    <h3>7. Limitation of Liability</h3>
+    <p>To the maximum extent permitted by law, ZT Studio is not liable for direct, indirect, incidental, or consequential damages. Use of the app is at your own risk.</p>
+
+    <h3>8. Service Changes</h3>
+    <p>We reserve the right to modify, suspend, or terminate features at any time.</p>
+
+    <h3>9. Terms Changes</h3>
+    <p>We may update these terms. Material changes will be posted on this page.</p>
+
+    <h3>10. Governing Law</h3>
+    <p>These terms are governed by the laws of the Republic of Türkiye. Disputes shall be resolved in Istanbul courts.</p>
+
+    <h3>11. Contact</h3>
+    <p>For questions: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <!-- ARABIC -->
+  <div class="section" id="lang-ar" dir="rtl">
+    <h2>شروط الاستخدام</h2>
+    <p class="updated">آخر تحديث: ٥ مايو ٢٠٢٦</p>
+    <div class="card"><p>هذه الشروط اتفاقية بينك وبين ZT Studio لاستخدام <strong>أوقات الصلاة والقبلة</strong>. باستخدامك للتطبيق فإنك توافق على هذه الشروط.</p></div>
+
+    <h3>١. وصف الخدمة</h3>
+    <p>يوفر التطبيق أوقات الصلاة، بوصلة القبلة، التقويم الهجري، نص القرآن وترجماته، مكتبة الأدعية والأحاديث، عداد التسبيح وميزات ذات صلة.</p>
+
+    <h3>٢. الدقة والمسؤولية</h3>
+    <p>أوقات الصلاة تُحسب عبر Aladhan API. قد تختلف عن المسجد المحلي قليلاً؛ يوجد خيار تعديل بالدقائق في الإعدادات. التطبيق ليس مرجعًا دينيًا.</p>
+
+    <h3>٣. الاستخدام المقبول</h3>
+    <p>يُحظر الهندسة العكسية، الطلبات الآلية المجمعة، التوزيع غير المصرح به، حظر الإعلانات.</p>
+
+    <h3>٤. حقوق النشر للمحتوى</h3>
+    <p>نص القرآن من Tanzil. الترجمات لأصحابها. التلاوة للشيخ مشاري العفاسي. الأحاديث من مصادر كلاسيكية عامة.</p>
+
+    <h3>٥. الإعلانات</h3>
+    <p>الإعلانات عبر Google AdMob؛ ZT Studio غير مسؤول عن محتوى الإعلانات.</p>
+
+    <h3>٦. حدود المسؤولية</h3>
+    <p>التطبيق يُقدّم "كما هو". لا تتحمل ZT Studio أي أضرار مباشرة أو غير مباشرة.</p>
+
+    <h3>٧. القانون المعمول به</h3>
+    <p>تخضع هذه الشروط لقوانين جمهورية تركيا. المحاكم المختصة هي محاكم إسطنبول.</p>
+
+    <h3>٨. الاتصال</h3>
+    <p><a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <!-- PERSIAN -->
+  <div class="section" id="lang-fa" dir="rtl">
+    <h2>شرایط استفاده</h2>
+    <p class="updated">آخرین به‌روزرسانی: ۵ می ۲۰۲۶</p>
+    <div class="card"><p>این شرایط توافقی میان شما و ZT Studio برای استفاده از <strong>اوقات نماز و قبله</strong> است.</p></div>
+
+    <h3>۱. توصیف خدمت</h3>
+    <p>اوقات نماز، قبله‌نما، تقویم هجری، متن قرآن و ترجمه‌ها، کتابخانه دعا و حدیث، شمارنده تسبیح.</p>
+
+    <h3>۲. دقت</h3>
+    <p>اوقات از Aladhan API است؛ ممکن است با مسجد محلی اندکی تفاوت داشته باشد. تنظیمات شامل گزینه تعدیل دقیقه است.</p>
+
+    <h3>۳. استفاده پذیرفته‌شده</h3>
+    <p>مهندسی معکوس، ربات، توزیع غیرمجاز و حذف تبلیغات ممنوع است.</p>
+
+    <h3>۴. حق نشر محتوا</h3>
+    <p>متن قرآن از Tanzil. تلاوت از شیخ مشاری العفاسی. احادیث از منابع کلاسیک عمومی.</p>
+
+    <h3>۵. حدود مسئولیت</h3>
+    <p>برنامه «همان‌طور که هست» ارائه می‌شود. ZT Studio مسئول خسارات نیست.</p>
+
+    <h3>۶. قانون حاکم</h3>
+    <p>قوانین جمهوری ترکیه. دادگاه‌های اسلامبول.</p>
+
+    <h3>۷. تماس</h3>
+    <p><a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <!-- MALAY -->
+  <div class="section" id="lang-my">
+    <h2>Syarat Penggunaan</h2>
+    <p class="updated">Kemaskini terakhir: 5 Mei 2026</p>
+    <div class="card"><p>Syarat-syarat ini adalah perjanjian antara anda dan ZT Studio untuk penggunaan <strong>Waktu Solat & Kiblat</strong>.</p></div>
+
+    <h3>1. Perkhidmatan</h3>
+    <p>Waktu solat, kompas Kiblat, kalendar Hijrah, Al-Quran, doa dan hadis, kaunter tasbih.</p>
+
+    <h3>2. Ketepatan</h3>
+    <p>Waktu daripada Aladhan API. Mungkin berbeza sedikit dengan masjid setempat. Pilihan pelarasan minit tersedia.</p>
+
+    <h3>3. Penggunaan Diterima</h3>
+    <p>Dilarang kejuruteraan terbalik, bot, edaran tanpa kebenaran, sekat iklan.</p>
+
+    <h3>4. Hak Cipta Kandungan</h3>
+    <p>Al-Quran dari Tanzil. Bacaan Sheikh Mishary Alafasy. Hadis dari sumber klasik umum.</p>
+
+    <h3>5. Had Tanggungjawab</h3>
+    <p>Aplikasi disediakan "seadanya". ZT Studio tidak bertanggungjawab atas kerugian.</p>
+
+    <h3>6. Undang-undang Berkenaan</h3>
+    <p>Undang-undang Republik Türkiye. Mahkamah Istanbul.</p>
+
+    <h3>7. Hubungi</h3>
+    <p><a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <!-- FRANÇAIS -->
+  <div class="section" id="lang-fr">
+    <h2>Conditions d'Utilisation</h2>
+    <p class="updated">Dernière mise à jour : 5 mai 2026</p>
+    <div class="card"><p>Ces conditions constituent un accord entre vous et ZT Studio pour l'utilisation de <strong>Heures de Prière & Qibla</strong>.</p></div>
+
+    <h3>1. Service</h3>
+    <p>Horaires de prière, boussole Qibla, calendrier hégirien, Coran, du'as et hadiths, compteur tasbih.</p>
+
+    <h3>2. Exactitude</h3>
+    <p>Les horaires proviennent de l'API Aladhan. Peut différer légèrement de la mosquée locale ; option d'ajustement en minutes disponible.</p>
+
+    <h3>3. Utilisation Acceptable</h3>
+    <p>Interdits : ingénierie inverse, bots, distribution non autorisée, blocage des publicités.</p>
+
+    <h3>4. Droits d'Auteur</h3>
+    <p>Texte du Coran de Tanzil. Récitation par Sheikh Mishary Alafasy. Hadiths de sources classiques publiques.</p>
+
+    <h3>5. Limitation de Responsabilité</h3>
+    <p>L'application est fournie "telle quelle". ZT Studio n'est pas responsable des dommages.</p>
+
+    <h3>6. Loi Applicable</h3>
+    <p>Lois de la République de Türkiye. Tribunaux d'Istanbul.</p>
+
+    <h3>7. Contact</h3>
+    <p><a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <!-- ESPAÑOL -->
+  <div class="section" id="lang-es">
+    <h2>Términos de Servicio</h2>
+    <p class="updated">Última actualización: 5 de mayo de 2026</p>
+    <div class="card"><p>Estos términos constituyen un acuerdo entre tú y ZT Studio para el uso de <strong>Horarios de Oración & Qibla</strong>.</p></div>
+
+    <h3>1. Servicio</h3>
+    <p>Horarios de oración, brújula Qibla, calendario hegiriano, Corán, du'as y hadices, contador tasbih.</p>
+
+    <h3>2. Precisión</h3>
+    <p>Los horarios vienen de la API Aladhan. Pueden diferir ligeramente de tu mezquita local; existe ajuste en minutos.</p>
+
+    <h3>3. Uso Aceptable</h3>
+    <p>Prohibido: ingeniería inversa, bots, distribución no autorizada, bloqueo de anuncios.</p>
+
+    <h3>4. Derechos de Autor</h3>
+    <p>Texto del Corán de Tanzil. Recitación de Sheikh Mishary Alafasy. Hadices de fuentes clásicas públicas.</p>
+
+    <h3>5. Limitación de Responsabilidad</h3>
+    <p>La aplicación se proporciona "tal cual". ZT Studio no es responsable por daños.</p>
+
+    <h3>6. Ley Aplicable</h3>
+    <p>Leyes de la República de Türkiye. Tribunales de Estambul.</p>
+
+    <h3>7. Contacto</h3>
+    <p><a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <!-- PORTUGUÊS -->
+  <div class="section" id="lang-pt">
+    <h2>Termos de Serviço</h2>
+    <p class="updated">Última atualização: 5 de maio de 2026</p>
+    <div class="card"><p>Estes termos constituem um acordo entre você e a ZT Studio para o uso de <strong>Horários de Oração & Qibla</strong>.</p></div>
+
+    <h3>1. Serviço</h3>
+    <p>Horários de oração, bússola Qibla, calendário hegírico, Alcorão, du'as e hadiths, contador tasbih.</p>
+
+    <h3>2. Precisão</h3>
+    <p>Horários vêm da API Aladhan. Podem diferir ligeiramente da mesquita local; existe ajuste em minutos.</p>
+
+    <h3>3. Uso Aceitável</h3>
+    <p>Proibido: engenharia reversa, bots, distribuição não autorizada, bloqueio de anúncios.</p>
+
+    <h3>4. Direitos Autorais</h3>
+    <p>Texto do Alcorão de Tanzil. Recitação por Sheikh Mishary Alafasy. Hadiths de fontes clássicas públicas.</p>
+
+    <h3>5. Limitação de Responsabilidade</h3>
+    <p>O aplicativo é fornecido "como está". A ZT Studio não é responsável por danos.</p>
+
+    <h3>6. Lei Aplicável</h3>
+    <p>Leis da República da Türkiye. Tribunais de Istambul.</p>
+
+    <h3>7. Contato</h3>
+    <p><a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
+  </div>
+
+  <footer>© 2026 ZT Studio · <a href="privacy-policy.html">Gizlilik Politikası</a></footer>
+</div>
+
+<script>
+  function showLang(code, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById('lang-' + code).classList.add('active');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>
