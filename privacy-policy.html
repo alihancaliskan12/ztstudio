@@ -12,18 +12,20 @@
     .logo-icon { width: 48px; height: 48px; background: #0d3b38; border-radius: 12px; border: 1.5px solid #2dd4bf; display: flex; align-items: center; justify-content: center; font-size: 24px; }
     .logo-text h1 { font-size: 18px; font-weight: 700; color: #fff; }
     .logo-text p { font-size: 13px; color: #64748b; }
-    h2 { font-size: 22px; font-weight: 700; color: #2dd4bf; margin-bottom: 8px; margin-top: 48px; }
-    h3 { font-size: 16px; font-weight: 600; color: #94a3b8; margin-top: 28px; margin-bottom: 8px; }
-    p { color: #94a3b8; margin-bottom: 16px; font-size: 15px; }
-    ul { color: #94a3b8; margin-bottom: 16px; padding-left: 20px; font-size: 15px; }
-    li { margin-bottom: 8px; }
-    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; margin-bottom: 16px; }
-    .updated { font-size: 13px; color: #475569; margin-bottom: 40px; }
+    h2 { font-size: 22px; font-weight: 700; color: #2dd4bf; margin-bottom: 8px; margin-top: 40px; }
+    h3 { font-size: 16px; font-weight: 600; color: #94a3b8; margin-top: 24px; margin-bottom: 8px; }
+    p { color: #94a3b8; margin-bottom: 14px; font-size: 15px; }
+    ul { color: #94a3b8; margin-bottom: 14px; padding-left: 22px; font-size: 15px; }
+    li { margin-bottom: 6px; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 22px; margin-bottom: 16px; }
+    .updated { font-size: 13px; color: #475569; margin-bottom: 32px; }
     .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
-    .lang-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(45,212,191,0.3); background: transparent; color: #2dd4bf; font-size: 13px; cursor: pointer; text-decoration: none; }
+    .lang-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(45,212,191,0.3); background: transparent; color: #2dd4bf; font-size: 13px; cursor: pointer; text-decoration: none; user-select: none; }
     .lang-btn.active { background: #2dd4bf; color: #0a0f1a; font-weight: 600; }
     .section { display: none; }
     .section.active { display: block; }
+    a { color: #2dd4bf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; color: #334155; font-size: 13px; }
   </style>
 </head>
@@ -51,180 +53,295 @@
   <!-- TÜRKÇE -->
   <div class="section active" id="lang-tr">
     <h2>Gizlilik Politikası</h2>
-    <p class="updated">Son güncelleme: 1 Mayıs 2026</p>
-    <div class="card"><p>ZT Studio olarak, <strong>Namaz Vakti & Kıble</strong> uygulamasını kullanırken gizliliğinizin korunmasını önemsiyoruz.</p></div>
-    <h3>Topladığımız Veriler</h3>
+    <p class="updated">Son güncelleme: 5 Mayıs 2026</p>
+    <div class="card"><p>ZT Studio olarak, <strong>Namaz Vakti & Kıble</strong> uygulamasını kullanırken gizliliğinizi koruma yükümlülüğünü ciddiye alıyoruz. Bu politika hangi verilerin toplandığını, neden toplandığını ve haklarınızı açıklar.</p></div>
+
+    <h3>1. Topladığımız Veriler</h3>
     <ul>
-      <li><strong>Konum Verisi:</strong> Namaz vakitlerini hesaplamak için GPS konumunuzu kullanıyoruz. Konum verisi yalnızca cihazınızda işlenir, sunucularımıza gönderilmez.</li>
-      <li><strong>İnternet Erişimi:</strong> Namaz vakitlerini Aladhan API'den almak için internet bağlantısı kullanılır.</li>
+      <li><strong>Konum:</strong> Namaz vakitlerini hesaplamak için GPS koordinatlarınız Aladhan API'ye gönderilir. Konum sunucularımızda saklanmaz.</li>
+      <li><strong>Cihazda yerel olarak saklananlar:</strong> seçtiğiniz dil, hesaplama yöntemi, vakit düzeltmeleri, bildirim tercihleri, favori dua/hadisler, kıldığınızı işaretlediğiniz vakitler. Bu veriler yalnızca cihazınızda kalır (AsyncStorage), bizim sunucularımıza iletilmez.</li>
+      <li><strong>Analitik veri:</strong> Hangi ekranı kullandığınız, dil değişikliği gibi anonim kullanım metrikleri Firebase Analytics aracılığıyla toplanır. Bu, uygulamayı geliştirmek içindir.</li>
+      <li><strong>Reklam tanımlayıcısı (IDFA/AdID):</strong> İzin verirseniz (iOS'ta ATT prompt'u, Avrupa'da UMP onay formu) reklam ağı kişiselleştirilmiş reklam göstermek için bunu kullanır. Reddederseniz sadece genel reklamlar gösterilir.</li>
     </ul>
-    <h3>Toplamadığımız Veriler</h3>
+
+    <h3>2. Toplamadığımız Veriler</h3>
     <ul>
-      <li>Kişisel kimlik bilgileri (ad, e-posta, telefon)</li>
-      <li>Kullanım istatistikleri veya analitik veriler</li>
-      <li>Cihaz tanımlayıcıları</li>
+      <li>Adınız, e-postanız, telefon numaranız (uygulamada hesap açma yok)</li>
       <li>Konum geçmişi</li>
+      <li>Rehberiniz, fotoğraflarınız, mikrofon</li>
     </ul>
-    <h3>Üçüncü Taraf Hizmetler</h3>
+
+    <h3>3. Üçüncü Taraf Hizmetler</h3>
     <ul>
-      <li><strong>Aladhan API</strong> — Namaz vakitlerini hesaplamak için. Gizlilik politikası: aladhan.com</li>
-      <li><strong>Nominatim (OpenStreetMap)</strong> — Ters coğrafi kodlama için. Gizlilik politikası: osmfoundation.org</li>
+      <li><strong>Aladhan API</strong> (aladhan.com) — Namaz vakitleri ve aylık takvim</li>
+      <li><strong>alquran.cloud</strong> — Kuran metni ve mealler</li>
+      <li><strong>cdn.islamic.network</strong> — Tilavet ses dosyaları (Mishary Alafasy)</li>
+      <li><strong>Nominatim / OpenStreetMap</strong> (osmfoundation.org) — Şehir adı için ters coğrafi kodlama</li>
+      <li><strong>Wikidata / GeoNames</strong> — Şehir adının kullanıcının diline çevrilmesi</li>
+      <li><strong>Google AdMob</strong> (privacy: policies.google.com/privacy) — Reklam gösterimi</li>
+      <li><strong>Google Firebase</strong> (firebase.google.com/support/privacy) — Anonim analitik</li>
     </ul>
-    <h3>Bildirimler</h3>
-    <p>Namaz vakti bildirimleri tamamen cihazınızda yerel olarak planlanır. Bildirim verisi herhangi bir sunucuya gönderilmez.</p>
-    <h3>İletişim</h3>
-    <p>Sorularınız için: <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>4. Reklamlar</h3>
+    <p>Uygulama Google AdMob aracılığıyla reklam gösterir. Avrupa Birliği kullanıcılarına Google UMP (User Messaging Platform) üzerinden GDPR onay formu gösterilir. iOS kullanıcılarına Apple ATT diyaloğu sorulur. Reddederseniz reklamlar yine gösterilir ancak kişiselleştirilmemiştir. Onay tercihinizi Ayarlar → "Reklam Onayını Yenile" ile sıfırlayabilirsiniz.</p>
+
+    <h3>5. Bildirimler</h3>
+    <p>Namaz vakti ve hatırlatma bildirimleri tamamen cihazınızda yerel olarak planlanır. Hiçbir push sunucusu kullanılmaz; bildirim metinleri ve zamanlamaları sunucuya gönderilmez.</p>
+
+    <h3>6. Çocuk Gizliliği</h3>
+    <p>Uygulama 13 yaş ve üzeri kullanıcılar içindir. Bilerek 13 yaş altı çocuklardan veri toplamayız.</p>
+
+    <h3>7. Haklarınız (GDPR / KVKK)</h3>
+    <ul>
+      <li><strong>Erişim:</strong> Hangi verilerin işlendiğini öğrenebilirsiniz.</li>
+      <li><strong>Silme:</strong> Cihazınızdaki yerel veriler için uygulamayı silmek yeterlidir. Firebase Analytics'teki anonim verilerin silinmesi için bizimle iletişime geçin.</li>
+      <li><strong>Onay geri çekme:</strong> Reklam onayınızı Ayarlar üzerinden yenileyebilirsiniz.</li>
+      <li><strong>Şikayet:</strong> Yerel veri koruma kurumuna (Türkiye için KVKK) başvurabilirsiniz.</li>
+    </ul>
+
+    <h3>8. Politika Değişiklikleri</h3>
+    <p>Bu politikada önemli bir değişiklik olursa bu sayfada yayınlanır. "Son güncelleme" tarihini takip edebilirsiniz.</p>
+
+    <h3>9. İletişim</h3>
+    <p>Sorularınız için: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
   <!-- ENGLISH -->
   <div class="section" id="lang-en">
     <h2>Privacy Policy</h2>
-    <p class="updated">Last updated: May 1, 2026</p>
-    <div class="card"><p>At ZT Studio, we care about your privacy while using <strong>Prayer Times & Qibla</strong>.</p></div>
-    <h3>Data We Collect</h3>
+    <p class="updated">Last updated: May 5, 2026</p>
+    <div class="card"><p>At ZT Studio, we take your privacy seriously while using <strong>Prayer Times & Qibla</strong>. This policy explains what data we collect, why, and your rights.</p></div>
+
+    <h3>1. Data We Collect</h3>
     <ul>
-      <li><strong>Location Data:</strong> We use your GPS location to calculate prayer times. Location data is processed only on your device and is never sent to our servers.</li>
-      <li><strong>Internet Access:</strong> An internet connection is used to fetch prayer times from the Aladhan API.</li>
+      <li><strong>Location:</strong> Your GPS coordinates are sent to the Aladhan API to calculate prayer times. Location is not stored on our servers.</li>
+      <li><strong>Local device storage:</strong> selected language, calculation method, time offsets, notification preferences, favorite duas/hadiths, prayed-marks. Stored only on your device (AsyncStorage); not transmitted to us.</li>
+      <li><strong>Analytics:</strong> Anonymous usage metrics (which screen, language changes) are collected via Firebase Analytics to improve the app.</li>
+      <li><strong>Advertising identifier (IDFA/AdID):</strong> If you allow (iOS ATT prompt, EU UMP consent form), the ad network uses it for personalized ads. If denied, only generic ads are shown.</li>
     </ul>
-    <h3>Data We Do NOT Collect</h3>
+
+    <h3>2. Data We Do NOT Collect</h3>
     <ul>
-      <li>Personal identification information (name, email, phone)</li>
-      <li>Usage statistics or analytics data</li>
-      <li>Device identifiers</li>
+      <li>Your name, email, phone (no account creation in the app)</li>
       <li>Location history</li>
+      <li>Your contacts, photos, microphone</li>
     </ul>
-    <h3>Third-Party Services</h3>
+
+    <h3>3. Third-Party Services</h3>
     <ul>
-      <li><strong>Aladhan API</strong> — For calculating prayer times. Privacy policy: aladhan.com</li>
-      <li><strong>Nominatim (OpenStreetMap)</strong> — For reverse geocoding. Privacy policy: osmfoundation.org</li>
+      <li><strong>Aladhan API</strong> (aladhan.com) — Prayer times and monthly calendar</li>
+      <li><strong>alquran.cloud</strong> — Quran text and translations</li>
+      <li><strong>cdn.islamic.network</strong> — Recitation audio (Mishary Alafasy)</li>
+      <li><strong>Nominatim / OpenStreetMap</strong> (osmfoundation.org) — Reverse geocoding for city name</li>
+      <li><strong>Wikidata / GeoNames</strong> — Translating city name into your language</li>
+      <li><strong>Google AdMob</strong> (policies.google.com/privacy) — Ad serving</li>
+      <li><strong>Google Firebase</strong> (firebase.google.com/support/privacy) — Anonymous analytics</li>
     </ul>
-    <h3>Notifications</h3>
-    <p>Prayer time notifications are scheduled entirely locally on your device. No notification data is sent to any server.</p>
-    <h3>Contact</h3>
-    <p>For questions: <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>4. Advertising</h3>
+    <p>The app shows ads via Google AdMob. EU users see a GDPR consent form via Google UMP. iOS users see Apple's ATT dialog. If denied, ads still display but are not personalized. You can reset your consent under Settings → "Reset Ad Consent".</p>
+
+    <h3>5. Notifications</h3>
+    <p>Prayer time and reminder notifications are scheduled entirely locally on your device. No push server is used; notification text and timing are not transmitted.</p>
+
+    <h3>6. Children's Privacy</h3>
+    <p>The app is intended for users 13 years and older. We do not knowingly collect data from children under 13.</p>
+
+    <h3>7. Your Rights (GDPR / CCPA)</h3>
+    <ul>
+      <li><strong>Access:</strong> You can request what data is processed.</li>
+      <li><strong>Deletion:</strong> Local data is removed by uninstalling the app. For Firebase Analytics anonymous data, contact us.</li>
+      <li><strong>Withdraw consent:</strong> You can refresh your ad consent in Settings.</li>
+      <li><strong>Complaint:</strong> You can file a complaint with your local data protection authority.</li>
+    </ul>
+
+    <h3>8. Policy Changes</h3>
+    <p>Material changes will be posted here; check the "Last updated" date.</p>
+
+    <h3>9. Contact</h3>
+    <p>For questions: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
   <!-- ARABIC -->
   <div class="section" id="lang-ar" dir="rtl">
     <h2>سياسة الخصوصية</h2>
-    <p class="updated">آخر تحديث: 1 مايو 2026</p>
-    <div class="card"><p>في ZT Studio، نهتم بخصوصيتك أثناء استخدام <strong>أوقات الصلاة والقبلة</strong>.</p></div>
-    <h3>البيانات التي نجمعها</h3>
+    <p class="updated">آخر تحديث: 5 مايو 2026</p>
+    <div class="card"><p>في ZT Studio، نأخذ خصوصيتك على محمل الجد عند استخدام <strong>أوقات الصلاة والقبلة</strong>. توضح هذه السياسة ما نجمعه ولماذا وحقوقك.</p></div>
+
+    <h3>١. البيانات التي نجمعها</h3>
     <ul>
-      <li><strong>بيانات الموقع:</strong> نستخدم موقع GPS الخاص بك لحساب أوقات الصلاة. تتم معالجة بيانات الموقع على جهازك فقط ولا ترسل إلى خوادمنا.</li>
-      <li><strong>الوصول إلى الإنترنت:</strong> يُستخدم اتصال الإنترنت لجلب أوقات الصلاة من Aladhan API.</li>
+      <li><strong>الموقع:</strong> يُرسل إحداثياتك إلى Aladhan API لحساب أوقات الصلاة. لا نخزّنه على خوادمنا.</li>
+      <li><strong>تخزين محلي:</strong> اللغة، طريقة الحساب، التعديلات، تفضيلات الإشعار، المفضلة. يُخزن على جهازك فقط.</li>
+      <li><strong>التحليلات:</strong> مقاييس استخدام مجهولة الهوية عبر Firebase Analytics لتحسين التطبيق.</li>
+      <li><strong>معرّف الإعلان:</strong> إذا سمحت (ATT/UMP)، يستخدمه AdMob للإعلانات المخصصة.</li>
     </ul>
-    <h3>البيانات التي لا نجمعها</h3>
+
+    <h3>٢. خدمات الطرف الثالث</h3>
     <ul>
-      <li>معلومات التعريف الشخصية</li>
-      <li>إحصاءات الاستخدام أو بيانات التحليلات</li>
-      <li>معرّفات الجهاز</li>
-      <li>سجل الموقع</li>
+      <li>Aladhan API، alquran.cloud، cdn.islamic.network، Nominatim، Google AdMob، Firebase</li>
     </ul>
-    <h3>الاتصال</h3>
-    <p>للاستفسارات: <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>٣. الإعلانات</h3>
+    <p>التطبيق يعرض إعلانات Google AdMob. مستخدمو الاتحاد الأوروبي يرون نموذج موافقة GDPR، ومستخدمو iOS يرون مربع حوار ATT. الرفض لا يوقف الإعلانات بل يجعلها عامة.</p>
+
+    <h3>٤. الإشعارات</h3>
+    <p>تُجدول الإشعارات محليًا على جهازك بالكامل.</p>
+
+    <h3>٥. خصوصية الأطفال</h3>
+    <p>التطبيق مخصص للمستخدمين بعمر 13 سنة فما فوق.</p>
+
+    <h3>٦. حقوقك</h3>
+    <p>الوصول، الحذف، سحب الموافقة، الشكوى لدى السلطة المحلية لحماية البيانات.</p>
+
+    <h3>٧. الاتصال</h3>
+    <p>للاستفسارات: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
   <!-- PERSIAN -->
   <div class="section" id="lang-fa" dir="rtl">
     <h2>سیاست حفظ حریم خصوصی</h2>
-    <p class="updated">آخرین به‌روزرسانی: ۱ می ۲۰۲۶</p>
-    <div class="card"><p>در ZT Studio، به حریم خصوصی شما هنگام استفاده از <strong>اوقات نماز و قبله</strong> اهمیت می‌دهیم.</p></div>
-    <h3>داده‌هایی که جمع‌آوری می‌کنیم</h3>
+    <p class="updated">آخرین به‌روزرسانی: ۵ می ۲۰۲۶</p>
+    <div class="card"><p>در ZT Studio، حریم خصوصی شما هنگام استفاده از <strong>اوقات نماز و قبله</strong> برای ما مهم است.</p></div>
+
+    <h3>۱. داده‌هایی که جمع می‌کنیم</h3>
     <ul>
-      <li><strong>داده موقعیت:</strong> از موقعیت GPS شما برای محاسبه اوقات نماز استفاده می‌کنیم. داده موقعیت فقط روی دستگاه شما پردازش می‌شود.</li>
-      <li><strong>دسترسی به اینترنت:</strong> برای دریافت اوقات نماز از Aladhan API استفاده می‌شود.</li>
+      <li><strong>موقعیت:</strong> برای محاسبه اوقات نماز به Aladhan API ارسال می‌شود.</li>
+      <li><strong>ذخیره محلی:</strong> زبان، روش محاسبه، تنظیمات اعلان، علاقه‌مندی‌ها — فقط روی دستگاه شما.</li>
+      <li><strong>تحلیل ناشناس:</strong> از طریق Firebase Analytics.</li>
+      <li><strong>شناسه تبلیغاتی:</strong> اگر اجازه دهید (ATT/UMP) برای تبلیغات شخصی‌سازی شده.</li>
     </ul>
-    <h3>تماس</h3>
-    <p>برای سوالات: <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>۲. خدمات شخص ثالث</h3>
+    <p>Aladhan، alquran.cloud، Nominatim، Google AdMob، Firebase.</p>
+
+    <h3>۳. تبلیغات</h3>
+    <p>تبلیغات از طریق Google AdMob نمایش داده می‌شود. کاربران EU فرم رضایت GDPR را می‌بینند.</p>
+
+    <h3>۴. حقوق شما</h3>
+    <p>دسترسی، حذف، لغو رضایت، شکایت.</p>
+
+    <h3>۵. تماس</h3>
+    <p>برای سوالات: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
   <!-- MALAY -->
   <div class="section" id="lang-my">
     <h2>Dasar Privasi</h2>
-    <p class="updated">Kemaskini terakhir: 1 Mei 2026</p>
+    <p class="updated">Kemaskini terakhir: 5 Mei 2026</p>
     <div class="card"><p>Di ZT Studio, kami mengambil berat tentang privasi anda semasa menggunakan <strong>Waktu Solat & Kiblat</strong>.</p></div>
-    <h3>Data Yang Kami Kumpul</h3>
+
+    <h3>1. Data Yang Kami Kumpul</h3>
     <ul>
-      <li><strong>Data Lokasi:</strong> Kami menggunakan lokasi GPS anda untuk mengira waktu solat. Data lokasi hanya diproses pada peranti anda sahaja.</li>
-      <li><strong>Akses Internet:</strong> Sambungan internet digunakan untuk mendapatkan waktu solat dari Aladhan API.</li>
+      <li><strong>Lokasi:</strong> Dihantar ke Aladhan API untuk waktu solat.</li>
+      <li><strong>Storan tempatan:</strong> bahasa, kaedah, tetapan, kegemaran — hanya pada peranti anda.</li>
+      <li><strong>Analitik tanpa nama:</strong> Firebase Analytics.</li>
+      <li><strong>ID iklan:</strong> Jika anda izinkan (ATT/UMP) untuk iklan peribadi.</li>
     </ul>
-    <h3>Hubungi Kami</h3>
-    <p>Untuk pertanyaan: <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>2. Pihak Ketiga</h3>
+    <p>Aladhan, alquran.cloud, Nominatim, Google AdMob, Firebase.</p>
+
+    <h3>3. Iklan</h3>
+    <p>Iklan ditayangkan melalui Google AdMob. Pengguna EU melihat borang persetujuan GDPR.</p>
+
+    <h3>4. Hak Anda</h3>
+    <p>Akses, padam, tarik balik persetujuan, aduan.</p>
+
+    <h3>5. Hubungi Kami</h3>
+    <p>Pertanyaan: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
   <!-- FRANÇAIS -->
   <div class="section" id="lang-fr">
     <h2>Politique de Confidentialité</h2>
-    <p class="updated">Dernière mise à jour : 1er mai 2026</p>
-    <div class="card"><p>Chez ZT Studio, nous accordons de l'importance à votre vie privée lors de l'utilisation de <strong>Heures de Prière & Qibla</strong>.</p></div>
-    <h3>Données que nous collectons</h3>
+    <p class="updated">Dernière mise à jour : 5 mai 2026</p>
+    <div class="card"><p>Chez ZT Studio, votre vie privée est essentielle lors de l'utilisation de <strong>Heures de Prière & Qibla</strong>.</p></div>
+
+    <h3>1. Données Collectées</h3>
     <ul>
-      <li><strong>Données de localisation :</strong> Nous utilisons votre position GPS pour calculer les heures de prière. Les données sont traitées uniquement sur votre appareil.</li>
-      <li><strong>Accès Internet :</strong> Une connexion Internet est utilisée pour récupérer les heures de prière depuis l'API Aladhan.</li>
+      <li><strong>Localisation :</strong> Envoyée à l'API Aladhan pour les horaires.</li>
+      <li><strong>Stockage local :</strong> langue, méthode, paramètres, favoris — uniquement sur votre appareil.</li>
+      <li><strong>Analytique anonyme :</strong> Firebase Analytics.</li>
+      <li><strong>Identifiant publicitaire :</strong> Avec votre consentement (ATT/UMP) pour les annonces personnalisées.</li>
     </ul>
-    <h3>Données que nous ne collectons PAS</h3>
-    <ul>
-      <li>Informations d'identification personnelle</li>
-      <li>Statistiques d'utilisation ou données analytiques</li>
-      <li>Identifiants d'appareil</li>
-      <li>Historique de localisation</li>
-    </ul>
-    <h3>Contact</h3>
-    <p>Pour toute question : <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>2. Tiers</h3>
+    <p>Aladhan, alquran.cloud, Nominatim, Google AdMob, Firebase.</p>
+
+    <h3>3. Publicité</h3>
+    <p>Les annonces sont diffusées via Google AdMob. Utilisateurs UE : formulaire de consentement GDPR.</p>
+
+    <h3>4. Vos Droits</h3>
+    <p>Accès, suppression, retrait du consentement, plainte.</p>
+
+    <h3>5. Contact</h3>
+    <p>Questions : <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
   <!-- ESPAÑOL -->
   <div class="section" id="lang-es">
     <h2>Política de Privacidad</h2>
-    <p class="updated">Última actualización: 1 de mayo de 2026</p>
-    <div class="card"><p>En ZT Studio, nos preocupamos por tu privacidad mientras usas <strong>Horarios de Oración & Qibla</strong>.</p></div>
-    <h3>Datos que recopilamos</h3>
+    <p class="updated">Última actualización: 5 de mayo de 2026</p>
+    <div class="card"><p>En ZT Studio, nos importa tu privacidad al usar <strong>Horarios de Oración & Qibla</strong>.</p></div>
+
+    <h3>1. Datos que Recopilamos</h3>
     <ul>
-      <li><strong>Datos de ubicación:</strong> Usamos tu ubicación GPS para calcular los horarios de oración. Los datos se procesan únicamente en tu dispositivo.</li>
-      <li><strong>Acceso a Internet:</strong> Se usa una conexión a Internet para obtener los horarios desde la API Aladhan.</li>
+      <li><strong>Ubicación:</strong> Enviada a la API Aladhan para los horarios.</li>
+      <li><strong>Almacenamiento local:</strong> idioma, método, ajustes, favoritos — solo en tu dispositivo.</li>
+      <li><strong>Analítica anónima:</strong> Firebase Analytics.</li>
+      <li><strong>Identificador publicitario:</strong> Con tu permiso (ATT/UMP) para anuncios personalizados.</li>
     </ul>
-    <h3>Datos que NO recopilamos</h3>
-    <ul>
-      <li>Información de identificación personal</li>
-      <li>Estadísticas de uso o datos analíticos</li>
-      <li>Identificadores de dispositivo</li>
-      <li>Historial de ubicación</li>
-    </ul>
-    <h3>Contacto</h3>
-    <p>Para preguntas: <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>2. Terceros</h3>
+    <p>Aladhan, alquran.cloud, Nominatim, Google AdMob, Firebase.</p>
+
+    <h3>3. Publicidad</h3>
+    <p>Anuncios mediante Google AdMob. Usuarios UE: formulario de consentimiento GDPR.</p>
+
+    <h3>4. Tus Derechos</h3>
+    <p>Acceso, eliminación, retiro de consentimiento, reclamación.</p>
+
+    <h3>5. Contacto</h3>
+    <p>Preguntas: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
   <!-- PORTUGUÊS -->
   <div class="section" id="lang-pt">
     <h2>Política de Privacidade</h2>
-    <p class="updated">Última atualização: 1 de maio de 2026</p>
-    <div class="card"><p>Na ZT Studio, nos preocupamos com sua privacidade ao usar <strong>Horários de Oração & Qibla</strong>.</p></div>
-    <h3>Dados que coletamos</h3>
+    <p class="updated">Última atualização: 5 de maio de 2026</p>
+    <div class="card"><p>Na ZT Studio, sua privacidade é importante ao usar <strong>Horários de Oração & Qibla</strong>.</p></div>
+
+    <h3>1. Dados Coletados</h3>
     <ul>
-      <li><strong>Dados de localização:</strong> Usamos sua localização GPS para calcular os horários de oração. Os dados são processados apenas no seu dispositivo.</li>
-      <li><strong>Acesso à Internet:</strong> Uma conexão à Internet é usada para buscar os horários da API Aladhan.</li>
+      <li><strong>Localização:</strong> Enviada ao Aladhan API para os horários.</li>
+      <li><strong>Armazenamento local:</strong> idioma, método, ajustes, favoritos — apenas no seu dispositivo.</li>
+      <li><strong>Analítica anônima:</strong> Firebase Analytics.</li>
+      <li><strong>Identificador de anúncios:</strong> Com sua permissão (ATT/UMP) para anúncios personalizados.</li>
     </ul>
-    <h3>Dados que NÃO coletamos</h3>
-    <ul>
-      <li>Informações de identificação pessoal</li>
-      <li>Estatísticas de uso ou dados analíticos</li>
-      <li>Identificadores de dispositivo</li>
-      <li>Histórico de localização</li>
-    </ul>
-    <h3>Contato</h3>
-    <p>Para dúvidas: <strong>ztstudio.dev@gmail.com</strong></p>
+
+    <h3>2. Terceiros</h3>
+    <p>Aladhan, alquran.cloud, Nominatim, Google AdMob, Firebase.</p>
+
+    <h3>3. Publicidade</h3>
+    <p>Anúncios via Google AdMob. Usuários da UE: formulário de consentimento GDPR.</p>
+
+    <h3>4. Seus Direitos</h3>
+    <p>Acesso, exclusão, retirada de consentimento, reclamação.</p>
+
+    <h3>5. Contato</h3>
+    <p>Dúvidas: <a href="mailto:ztstudio.dev@gmail.com"><strong>ztstudio.dev@gmail.com</strong></a></p>
   </div>
 
-  <footer><p>© 2026 ZT Studio · Namaz Vakti & Kıble</p></footer>
+  <footer>© 2026 ZT Studio · <a href="terms-of-service.html">Kullanım Şartları</a></footer>
 </div>
+
 <script>
-function showLang(lang, el) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('lang-' + lang).classList.add('active');
-  el.classList.add('active');
-}
+  function showLang(code, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById('lang-' + code).classList.add('active');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
 </script>
 </body>
 </html>
